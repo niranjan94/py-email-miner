@@ -1,4 +1,8 @@
-`email-miner` makes it easy to mine IMAP mailboxes in a simple pythonic way. It is as a thin-wrapper around the awesome [IMAPClient](https://github.com/mjs/imapclient) library.
+<img width=100 src="https://res.cloudinary.com/niranjan94/image/upload/c_scale,w_200/v1558590706/mine_caxqwq.png">
+
+<hr>
+
+`email-miner` makes it easy to mine IMAP mailboxes in a simple pythonic way. It's a thin-wrapper around the awesome [IMAPClient](https://github.com/mjs/imapclient) library.
 
 ### Installation
 
