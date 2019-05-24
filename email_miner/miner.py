@@ -95,6 +95,25 @@ class Miner:
         """
         self.imap.add_flags(message_ids, [SEEN])
 
+    def delete(self, message_ids: List[int]):
+        """
+        Delete the given message IDs
+
+        :param message_ids:
+        :return:
+        """
+        self.imap.delete_messages(message_ids, True)
+
+    def archive(self, message_ids: List[int]):
+        """
+        Archive the given message IDs
+
+        :param message_ids:
+        :return:
+        """
+        self.imap.copy(message_ids, br'\Archive')
+        self.delete(message_ids)
+
     def get_emails(self, unread_only: bool = True,
                    with_body: bool = False,
                    keep_as_unread: bool = False,
