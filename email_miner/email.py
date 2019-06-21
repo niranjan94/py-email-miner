@@ -43,6 +43,9 @@ class Email:
     in_reply_to: str
     message_id: str
 
+    text_html: str
+    text_plain: str
+
     raw_envelope: Envelope
     raw_body: bytes
 

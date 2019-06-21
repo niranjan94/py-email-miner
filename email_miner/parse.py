@@ -77,6 +77,10 @@ def parse_emails(raw_emails: Dict[int, Dict], in_memory: bool = True) -> List[Em
         if b'BODY[]' in raw_email:
             email.raw_body = raw_email[b'BODY[]']
             parsed = mailparser.parse_from_bytes(email.raw_body)
+
+            email.text_html = parsed.text_html
+            email.text_plain = parsed.text_plain
+
             for raw_attachment in parsed.attachments:
                 attachment = Attachment()
                 attachment.file_name = raw_attachment['filename']
